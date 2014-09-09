@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+.wx_menu {
+	width: 231px;
+	position: relative;
+	margin: 0 auto;
+	top: 430px;
+	left: 2px;
+}
+
+.wx_menu li {
+	border: 1px solid #ccc;
+	width: 74.9px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	position: relative;
+	cursor: pointer;
+}
+
+.wx_menu ul {
+	padding: 0;
+	margin: 0;
+}
+
+.wx_menu ul li ul {
+	display: block;
+	position: absolute;
+	bottom: 40px;
+}
+
+.wx_menu ul li ul li {
+	left: -1px;
+}
+
+.wx_menu ul li ul li ul {
+	display: none;
+	left: 210px;
+}

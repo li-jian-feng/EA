@@ -1,0 +1,32 @@
+<extend name="Index/base" />
+<block name="other">
+    <js href="__JS__/global.js" />
+</block>
+
+<!-- layout -->
+<block name="north">
+    <div data-options="region:'north'" style="height:60px;">
+        <h3 style="padding-left:20px;margin:20px auto;">管理系统</h3>
+    </div>
+</block>
+<block name="west">
+    <div data-options="region:'west',title:'导航'" style="width:190px;">
+        <div id="accor" class="easyui-accordion" data-options="border:false,fit:true">
+            <include file="Index/navigation" />
+        </div>
+        <form id="ea_jump_form" method="post" style="display: none;" target="_blank"><input name="title"></form>
+    </div>
+</block>
+<block name="east">
+    <div data-options="region:'east',title:'日历',collapsible:false,tools:[{iconCls:'icon-reload',handler:function(){$('#index_calendar').calendar('moveTo',new Date());}}]" style="width:200px;">
+        <div id="index_calendar" class="easyui-calendar" data-options="border:false,styler:function(date){if(date.getDay() == 1){return 'background-color:#ccc';}}" style="width:198px;"></div>
+    </div>
+</block>
+
+<block name="center">
+    <div data-options="region:'center',border:false">
+        <div class="easyui-tabs" id="home_tabs" data-options="fit:true">
+            <include file="Index/home" />
+        </div>
+    </div>
+</block>

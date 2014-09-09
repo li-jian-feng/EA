@@ -1,0 +1,65 @@
+<extend name="Application/Home/View/Index/base.html" />
+<block name="title">自定义菜单</block>
+<block name="center">
+<div data-options="region:'center',border:false">
+    <css href="__CSS__/Wx/menu.css" />
+    <div style="background-image: url(__IMG__/phone.jpg); width: 270px; height: 550px; float: left;">
+        <div class="wx_menu">
+            <ul>
+                <foreach name="menu" item="vp">
+                <li class="level_one_menu">
+                    <div data-id="{$vp.id}" data-type="{$vp.type}" data-sort="{$vp.sort}" data-url="{$vp.url}">{$vp.name}</div>
+                    <ul>
+                        <foreach name="vp.sub_button" item="vc">
+                        <li class="level_two_menu">
+                            <div data-id="{$vc.id}" data-type="{$vc.type}" data-sort="{$vc.sort}" data-pid="{$vc.pid}" data-url="{$vc.url}">{$vc.name}</div>
+                        </li>
+                        </foreach>
+                    </ul>
+                </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+    <div style="border: 1px solid #ccc; float: left; width: 400px; height: 300px; margin: 100px 0 0 100px; position: relative;">
+        <form id="weixin_menu_form" style="padding-left: 20px; padding-top: 10px;">
+            <table>
+                <tr>
+                    <td>菜单标题：</td>
+                    <td><input name="name" class="easyui-validatebox" data-options="required:true"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span style="color: #ccc;">注：一级菜单最多4个汉字，二级菜单最多7个汉字，多出来的部分将会以“...”代替。</span></td>
+                </tr>
+                <tr>
+                    <td>回复类型：</td>
+                    <td><select id="menu_type_select" name="type" class="easyui-combobox">
+                            <option value="TEXT">文本回复</option>
+                            <option value="VIEW">网页链接</option>
+                            <option value="MUSIC">今日歌曲</option>
+                            <option value="WEATHER">天气查询</option>
+                    </select></td>
+                </tr>
+                <tr style="display: none;">
+                    <td>URL地址：</td>
+                    <td><input name="url"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span id="menu_form_messager" style="color: red; display: none;">请先删除二级菜单中的所有菜单项</span></td>
+                </tr>
+            </table>
+            <div>
+                <input name="id" type="hidden"> <input name="sort" type="hidden"> <input name="pid" type="hidden">
+            </div>
+        </form>
+        <div style="position: absolute; bottom: 0; border-top: 1px solid #ccc; cursor: pointer; height: 35px; line-height: 35px; width: 100%;">
+            <div id="menu_save_btn" style="width: 49%; border-right: 1px solid #ccc; text-align: center; float: left;">保存</div>
+            <div id="menu_del_btn" style="width: 49%; text-align: center; float: left;">删除</div>
+        </div>
+        <div>
+            <a id="menu_close_server" class="easyui-linkbutton">关闭自定义菜单</a> <a id="menu_save_server" class="easyui-linkbutton" style="float: right;">生成自定义菜单</a>
+        </div>
+    </div>
+</div>
+</block>
+<block name="js"> <Mytag:script pack="My.wx" src="weixin/menu.js" /> </block>

@@ -1,0 +1,46 @@
+<extend name="Application/Home/View/Index/base.html" />
+<block name="title">接口配置</block>
+<block name="center">
+    <div data-options="region:'center',border:false">
+        <form id="weixin_api_form">
+            <table style="padding-left: 30px; line-height: 35px;">
+                <tr>
+                    <td>头像：</td>
+                    <td><img src="__IMG__/{$data.head_img}"></td>
+                </tr>
+                <tr>
+                    <td>URL：</td>
+                    <td><input type="text" name="url" value="{$data.url}" readonly> <span style="cursor: pointer;" onclick="$('input[name=url]').select();">复制</span></td>
+                </tr>
+                <tr>
+                    <td>Token：</td>
+                    <td><input type="text" name="token" value="{$data.token}" readonly> <span style="cursor: pointer;" onclick="$('input[name=token]').select();">复制</span></td>
+                </tr>
+                <tr>
+                    <td>公众号名称：</td>
+                    <td><input class="easyui-validatebox" type="text" name="name" value="{$data.name}" data-options="required:true">*</td>
+                </tr>
+                <tr>
+                    <td>公众号原始Id：</td>
+                    <td><input class="easyui-validatebox" type="text" name="original_id" value="{$data.original_id}" required>*</td>
+                </tr>
+                <tr>
+                    <td>微信号：</td>
+                    <td><input class="easyui-validatebox" type="text" name="wx_username" value="{$data.wx_username}" required>*</td>
+                </tr>
+                <tr>
+                    <td>AppId：</td>
+                    <td><input type="text" name="app_id" value="{$data.app_id}"></td>
+                </tr>
+                <tr>
+                    <td>AppSecret：</td>
+                    <td><input type="text" name="app_secret" value="{$data.app_secret}"></td>
+                </tr>
+            </table>
+            <a class="easyui-linkbutton btn1" id="wx_api_save_btn" style="margin-left: 200px;">保存</a>
+        </form>
+    </div>
+</block>
+<block name="js">
+    <Mytag:script pack="Wx.api" src="weixin/api.js" />
+</block>

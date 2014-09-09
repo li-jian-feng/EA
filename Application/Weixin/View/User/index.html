@@ -1,0 +1,35 @@
+<extend name="Application/Home/View/Index/base.html" />
+<block name="title">关注者列表</block>
+<block name="north">
+<div data-options="region:'north',border:false" style="height: 70px;">
+    <form id="wx_user_search_form">
+        <table style="height: 100%; padding: 5px;">
+            <tr>
+                <td><select class="easyui-combobox" data-options="
+            onChange:function(n,o){$('#wx_user_input_name').attr('name',n);}">
+                        <option value="Q_username_like">账号</option>
+                        <option value="Q_nickname_like">昵称</option>
+                </select></td>
+                <td><input type="text" id="wx_user_input_name" name="Q_username_like"></td>
+                <td>邮箱</td>
+                <td><input type="text" name="Q_email_like"></td>
+                <td rowspan="2">
+                    <a href="javascript:void(0);" class="easyui-linkbutton btn1" id="wx_user_search_btn">查询</a>
+                    <a href="javascript:void(0);" class="easyui-linkbutton btn1" onclick="$('#wx_user_search_form').form('reset');">清空</a>
+                </td>
+            </tr>
+            <tr style="padding: 5px;">
+                <td>创建时间</td>
+                <td><input class="easyui-datetimebox" name="Q_create_time_egt" type="text"></td>
+                <td style="text-align: center;">-</td>
+                <td><input class="easyui-datetimebox" name="Q_create_time_elt" type="text"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</block>
+<block name="center">
+<table id="wx_users_grid"></table>
+</block>
+
+<block name="js"> <Mytag:script pack="My.wx" src="weixin/user.js" /> </block>

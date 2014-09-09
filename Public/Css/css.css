@@ -1,0 +1,126 @@
+form {
+	height: 100%;
+}
+
+label {
+	vertical-align: middle;
+}
+
+ul {
+	list-style-type: none;
+}
+
+input[type=text], input[type=password], textarea {
+	border: 1px #D4D4D4 solid;
+	height: 18px;
+	vertical-align: middle;
+}
+
+.img-btn {
+	margin: 0 5px;
+	padding: 2px 0 2px 16px;
+	cursor: pointer;
+}
+
+.img-btn:hover {
+	border: 1px #D4D4D4 solid;
+}
+
+.btn1 {
+	padding: 0 10px;
+}
+
+/*
+  自定义图标
+*/
+.icon-add1 {
+	background: url('../Img/icons/edit_add.png') no-repeat center center;
+}
+
+.icon-edit1 {
+	background: url('../Img/icons/edit.png') no-repeat center center;
+}
+
+.icon-setting1 {
+	background: url('../Img/icons/setting.png') no-repeat center center;
+}
+
+.icon-remove1 {
+	background: url('../Img/icons/edit_remove.png') no-repeat center center;
+}
+
+.icon-newwin1 {
+	background: url('../Img/icons/openlayer.png') no-repeat center center;
+}
+
+.icon-system1 {
+	background: url('../Img/icons/system.png') no-repeat center center;
+}
+
+.icon-user1 {
+	background: url('../Img/icons/user.png') no-repeat center center;
+}
+
+.icon-role1 {
+	background: url('../Img/icons/role.png') no-repeat center center;
+}
+
+.icon-menu1 {
+	background: url('../Img/icons/menu.png') no-repeat center center;
+}
+
+.icon-function1 {
+	background: url('../Img/icons/function.png') no-repeat center center;
+}
+
+.icon-application1 {
+	background: url('../Img/icons/application.png') no-repeat center center;
+}
+
+.icon-clear1 {
+	background: url('../Img/icons/clear.png') no-repeat center center;
+}
+
+.icon-controller1 {
+	background: url('../Img/icons/controller.png') no-repeat center center;
+}
+
+.icon-department1 {
+	background: url('../Img/icons/department.png') no-repeat center center;
+}
+
+.icon-setting1 {
+	background: url('../Img/icons/setting.png') no-repeat center center;
+}
+
+.icon-no1 {
+	background: url('../Img/icons/no.png') no-repeat center center;
+}
+
+.icon-lock1 {
+	background: url('../Img/icons/lock.png') no-repeat center center;
+}
+
+.icon-wei1 {
+	background: url('../Img/icons/wei.png') no-repeat center center;
+}
+
+.icon-alibaba1 {
+	background: url('../Img/icons/alibaba.png') no-repeat center center;
+}
+
+.icon-baidu1 {
+	background: url('../Img/icons/baidu.png') no-repeat center center;
+}
+
+.icon-chart1 {
+	background: url('../Img/icons/b_chart.png') no-repeat center center;
+}
+
+.icon-gear1 {
+	background: url('../Img/icons/s_cog.png') no-repeat center center;
+}
+
+.icon-material1 {
+	background: url('../Img/icons/material.png') no-repeat center center;
+}

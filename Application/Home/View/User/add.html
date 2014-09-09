@@ -1,0 +1,23 @@
+<form id="ea_user_form" class="form">
+	<table align="center">
+		<tr>
+			<td>账号：</td>
+			<td><input name="username" type="text" class="easyui-validatebox" value="{$data.account}" {$data['user_id']?'readonly':''} maxlength="20" required></td>
+			<td>昵称：</td>
+			<td><input name="nickname" type="text" class="easyui-validatebox" value="{$data.nickname}" maxlength="10" required></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input name="password" type="password" class="{$data['user_id']?'':'easyui-validatebox'}" maxlength="16" required></td>
+			<td>邮箱：</td>
+			<td><input name="email" type="text" class="easyui-validatebox" value="{$data['email']}22@qq.com" data-options="validType:'email'" maxlength="30" required></td>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td><select name="sex" class="easyui-combobox">
+              <option value="1">男</option>
+              <option value="2">女</option>
+              </select></td>
+		</tr>
+	</table>
+</form>

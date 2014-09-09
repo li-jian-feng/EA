@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<css href="__CSS__/themes/bootstrap/easyui.css" />
+<css href="__CSS__/themes/icon.css" />
+<css href="__CSS__/css.css" />
+<js href="__JS__/jquery.min.js" />
+<js href="__JS__/jquery.easyui.min.js" />
+<js href="__JS__/jquery.validatebox.fixed.js" />
+<js href="__JS__/locale/easyui-lang-zh_CN.js" />
+<js href="__JS__/myutil.js" />
+<!-- 加载其它文件 -->
+<block name="other"></block>
+<!-- 标题  -->
+<title>
+<block name="title">
+系统管理
+</block>
+</title>
+</head>
+<body>
+    <div class="easyui-layout" data-options="fit:true">
+        <!-- layout -->
+        <block name="north"></block>
+        <block name="west"></block>
+        <block name="east"></block>
+        <block name="south"> <if condition="!$isAjax">
+        <div data-options="region:'south'" style="height: 28px; line-height: 26px; text-align: center;">
+            <span>© 技术支持 Black丶丶Mamba __1024514854@qq.com</span>
+        </div>
+        </if> </block>
+        
+        <block name="center"></block>
+
+    </div>
+    <!-- 加载js文件 -->
+    <block name="js"></block>
+</body>
+</html>
