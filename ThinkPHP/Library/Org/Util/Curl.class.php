@@ -20,7 +20,7 @@ class Curl {
 
     /**
      * 执行
-     * @param url string 
+     * @param url string
      * @param type [GET|POST|PUT|DELETE]
      * @return mixed
      */
@@ -38,6 +38,7 @@ class Curl {
         $content = curl_exec($this->ch);
         return $content;
     }
+
     public function __destruct(){
         curl_close($this->ch);
     }

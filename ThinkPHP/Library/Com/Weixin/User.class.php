@@ -28,7 +28,10 @@ class User extends Weixin {
      * @param string next_openid
      */
     public function getUsers($next_openid = ''){
-        $url = $this->url . 'user/get?access_token=' . $this->ACCESS_TOKEN . '&next_openid=' . $next_openid;
+        $url = $this->url . 'user/get?access_token=' . $this->ACCESS_TOKEN;
+        if($next_openid){
+            $url .= '&next_openid=' . $next_openid;
+        }
         return file_get_contents($url);
     }
 
@@ -36,4 +39,11 @@ class User extends Weixin {
      * 获取用户地理位置
      */
     public function a(){}
+
+    /**
+     * 网页授权获取用户基本信息
+     */
+    public function auth(){
+        
+    }
 }
