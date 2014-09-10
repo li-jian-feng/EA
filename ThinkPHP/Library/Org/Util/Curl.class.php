@@ -15,6 +15,7 @@ class Curl {
      * @param [json|array] data
      */
     public function createData($data){
+        // curl_setopt($this->ch, CURLOPT_POST, 1);
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $data);
     }
 
@@ -36,6 +37,7 @@ class Curl {
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, 1);
         
         $content = curl_exec($this->ch);
+        // $httpinfo = curl_getinfo($this->ch);
         return $content;
     }
 
